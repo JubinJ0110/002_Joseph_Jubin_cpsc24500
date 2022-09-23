@@ -1,12 +1,15 @@
 package WebPageBuilder;
 import java.util.Scanner;
+// Import statements
 
 public class WebPageBuilder {
 
+// function toconvert age in years to age in months
     public static int computeAgeInMonths(int age){
         return age*12;
     }
 
+// function to compute the quotient between the 2 favorite nums of the users
     public static double computeQuotient(double x, double y){
         return x/y;
     }
@@ -14,6 +17,7 @@ public class WebPageBuilder {
     public static void main(String[] args){
         Scanner  ScanMan = new Scanner(System.in);
 
+// Intro Statement
         System.out.println("""
 *---------------------------------*
 |         Web Builder V1.0        |
@@ -25,6 +29,7 @@ generate your site using each
 response.
                 """);
 
+// Ask user basic questions and receive responses from user
         System.out.println("What is your name?");
         String name = ScanMan.nextLine();
         System.out.println("How old are you?");
@@ -41,6 +46,7 @@ response.
         double quotient = computeQuotient(num1,num2);
         int ageInMonths = computeAgeInMonths(age);
 
+// printout responses into html code
         System.out.println("\n<html>");
         System.out.printf("<head><title>%s's Web Page</title></head>\n", name);
         System.out.println("<body>");
